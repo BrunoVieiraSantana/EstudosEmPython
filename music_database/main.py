@@ -24,7 +24,7 @@ with open('database.json', 'r') as data:
     while True:
         print('Database de Músicas')
     
-        escolhas_possiveis = ['Exibir artistas', 'Exibir álbuns', 'Exibir Músicas', 'Sair']
+        escolhas_possiveis = ['Exibir artistas', 'Exibir álbuns', 'Exibir Músicas', 'Adicionar', 'Sair']
         for i, opcao in enumerate(escolhas_possiveis):
             print(f'{i+1} - {opcao}')
         try:
@@ -54,8 +54,51 @@ with open('database.json', 'r') as data:
                         lista_musicas=[musica for album in dicionario[key]["albuns"].values() for musica in album["musicas"]]
                         print(*lista_musicas, sep='\n')
                     print('')
-
+                
                 case 4:
+                    os.system('cls')
+                    escolhas_add=['Adicionar Artista', 'Adicionar Álbum para um Artista existente', 'Adicionar Músicar em um Álbum existente', 'Voltar para o Menu Principal']
+                    while True:
+                        for i, escolha in enumerate(escolhas_add):
+                            print(f'{i+1} - {escolha}')
+                        escolha_menu_add=(int(input('> ')))
+                        match escolha_menu_add:
+                            case 1:
+                                os.system('cls')
+                                print('Digite o nome do Artista que deve ser adicionado')
+                                nome = input(str('> '))
+                                novo_artista={nome.upper():{"artista": nome.capitalize()}}
+                                os.system('cls')
+                                print(f'{nome.capitalize()} adicionado com sucesso')
+                                print('')
+
+                                with open("database.json", "r+") as data:
+                                    dicionario = json. load(data)
+                                    dicionario. update(novo_artista)
+                                    data.seek(0)
+                                    json.dump(dicionario, data, indent=4)
+                            
+                            case 2:
+                                os.system('cls')
+                                with open('database.json', 'r') as data:
+                                    dicionario = json.load(data)
+                                    print('--- Escolha o Artista ---')
+                                    lista_artistas=[f'{i+1} - {artista.capitalize()}' for i,  artista in enumerate(dicionario.keys())]
+                                    print(*lista_artistas, sep='\n')
+                                    escolha_artista = int(input('> '))
+                                    print(f'{list(dicionario.keys())[escolha_artista-1]} selecionado')
+
+                            
+                            case 3:
+                                os.system('cls')
+                                pass
+
+                            case 4:
+                                os.system('cls')
+                                break
+
+
+                case 5:
                     # encerrar o programa
                     os.system('cls')
                     print('Saindo')
