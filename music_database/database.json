@@ -33,5 +33,13 @@
                 ]
             }
         }
+    },
+    "ANGRA": {
+        "artista": "Angra",
+        "albuns": {
+            "Angels Cry": {
+                "musicas": []
+            }
+        }
     }
 }
