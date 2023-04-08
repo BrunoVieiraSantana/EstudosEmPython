@@ -56,6 +56,7 @@ with open('database.json', 'r') as data:
                     print('')
 
                 case 4:
+                    # encerrar o programa
                     os.system('cls')
                     print('Saindo')
                     break
