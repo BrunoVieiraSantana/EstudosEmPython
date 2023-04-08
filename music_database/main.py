@@ -32,6 +32,7 @@ with open('database.json', 'r') as data:
             match escolha_menu:
                 case 1:
                     os.system('cls')
+                    # Listar Artistas contidos no arquivo json
                     print('--- Artistas ---')
                     for key in dicionario.keys():
                         print(key.capitalize())
