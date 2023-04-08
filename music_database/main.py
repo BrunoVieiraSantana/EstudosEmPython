@@ -99,7 +99,7 @@ with open('database.json', 'r') as data:
 
 
                 case 5:
-                    # encerrar o programa
+                    # encerra o programa
                     os.system('cls')
                     print('Saindo')
                     break
