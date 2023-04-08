@@ -1,0 +1,30 @@
+{
+    "OZZY": {
+        "artista": "Ozzy",
+        "albuns": {
+            "Blizzard of Ozz": {
+                "musicas": [
+                    "Crazy Train",
+                    "Dee"
+                ]
+            },
+            "Bark at the Moon": {
+                "musicas": [
+                    "Bark at the Moon",
+                    "You're No Different"
+                ]
+            }
+        }
+    },
+    "IRON MAIDEN": {
+        "artista": "Iron Maiden",
+        "albuns": {
+            "The Number of the Beast": {
+                "musicas": [
+                    "Run to the Hills",
+                    "Hallowed Be Thy Name"
+                ]
+            }
+        }
+    }
+}
