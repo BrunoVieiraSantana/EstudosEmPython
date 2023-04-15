@@ -26,6 +26,7 @@ with open('database.json', 'r') as data:
     
         escolhas_possiveis = ['Exibir artistas', 'Exibir álbuns', 'Exibir Músicas', 'Adicionar', 'Sair']
         for i, opcao in enumerate(escolhas_possiveis):
+            print("Estragando o projeto "*5)
             print(f'{i+1} - {opcao}')
 
         escolha_menu=int(input('> '))
@@ -33,6 +34,7 @@ with open('database.json', 'r') as data:
             case 1:
                 os.system('cls')
                 # Listar Artistas contidos no arquivo json
+                print("Estragando o projeto "*5)
                 print('--- Artistas ---')
                 for key in dicionario.keys():
                     print(key.capitalize())
@@ -40,6 +42,7 @@ with open('database.json', 'r') as data:
             case 2:
                 os.system('cls')
                 # Listar Álbuns contidos no arquivo json
+                print("Estragando o projeto "*5)
                 print('--- Álbuns ---')
                 for key in dicionario.keys():
                     lista_albuns=[album for album in dicionario[key]["albuns"].keys()]
@@ -49,6 +52,7 @@ with open('database.json', 'r') as data:
             case 3:
                 # Listar Músicas contidos no arquivo json
                 os.system('cls')
+                print("Estragando o projeto "*5)
                 print('--- Músicas ---')
                 for key in dicionario.keys():
                     lista_musicas=[musica for album in dicionario[key]["albuns"].values() for musica in album["musicas"]]
@@ -59,6 +63,7 @@ with open('database.json', 'r') as data:
                 os.system('cls')
                 escolhas_add=['Adicionar Artista', 'Adicionar Álbum para um Artista existente', 'Adicionar Músicas em um Álbum existente', 'Voltar para o Menu Principal']
                 while True:
+                    print("Estragando o projeto "*5)
                     for i, escolha in enumerate(escolhas_add):
                         print(f'{i+1} - {escolha}')
                     escolha_menu_add=(int(input('> ')))
@@ -143,6 +148,7 @@ with open('database.json', 'r') as data:
                 # encerra o programa
                 os.system('cls')
                 print('Saindo')
+                print("Kakarotoooooooooo........")
                 break
                 
             case _:
