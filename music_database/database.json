@@ -38,7 +38,10 @@
         "artista": "Angra",
         "albuns": {
             "Angels Cry": {
-                "musicas": []
+                "musicas": [
+                    "Time",
+                    "Carry On"
+                ]
             }
         }
     }
