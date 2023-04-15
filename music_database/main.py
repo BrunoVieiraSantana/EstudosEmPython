@@ -131,7 +131,7 @@ with open('database.json', 'r') as data:
                                 os.system('cls')
                                 print('--- Faixas atualizadas ---')
                                 print(*lista_temp, sep='\n')
-                                print('')
+                                print('Finalizado')
                                 
 
                         case 4:
