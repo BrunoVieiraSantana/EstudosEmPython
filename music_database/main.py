@@ -131,7 +131,11 @@ with open('database.json', 'r') as data:
                                 os.system('cls')
                                 print('--- Faixas atualizadas ---')
                                 print(*lista_temp, sep='\n')
-                                print('Finalizado')
+                                print('')
+                                with open("database.json", "r+") as data:
+                                    data.write('{}')
+                                    data.seek(0)
+                                    json.dump(dicionario, data, indent=4)
                                 
 
                         case 4:
